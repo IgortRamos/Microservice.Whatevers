@@ -6,8 +6,8 @@ namespace Microservice.Whatevers.Domain.Abstractions.Notifications
     {
         bool IsValid();
         void AddError(string error);
-        void AddErrors(IEnumerable<string> errors);
-        IEnumerable<string> GetErrors();
+        void AddErrors(params string[] errors);
+        string[] GetErrors();
         string GetError();
     }
 }

@@ -6,6 +6,7 @@ namespace Microservice.Whatevers.Domain.Abstractions.Builders
         where TId : struct
     {
         protected TId Id;
+
         public abstract TEntity Build();
 
         public TBuilder WithId(TId id)

@@ -3,6 +3,7 @@ using System.Net;
 using System.Net.Mime;
 using System.Text.Json;
 using System.Threading.Tasks;
+using Microservice.Whatevers.Domain;
 using Microservice.Whatevers.Domain.Exceptions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
@@ -15,34 +16,34 @@ namespace Microservice.Whatevers.WebApi.Extensions
     {
         public static void ConfigureExceptionHandler(this IApplicationBuilder app) =>
             app.UseExceptionHandler(appError => 
-                appError.Run(context =>
+                appError.Run(context => 
                 {
                     var error = context.Features.Get<IExceptionHandlerFeature>()?.Error;
-                    if(error == default) return Task.CompletedTask;
+                    if (error == default) return Task.CompletedTask;
                     var problem = MakeProblem(error);
                     return MakeResponse(context, problem);
                 }));
 
-        private static Task MakeResponse(HttpContext context, ProblemDetails problem)
-        {
-            context.Response.StatusCode =  problem.Status ?? (int) HttpStatusCode.InternalServerError;
-            context.Response.ContentType = MediaTypeNames.Application.Json;
-            var json = JsonSerializer.Serialize(problem);
-            return context.Response.WriteAsync(json);
-        }
-
         private static ProblemDetails MakeProblem(Exception ex) =>
-            ex is BusinessException
+            ex is BusinessException 
                 ? new ProblemDetails
                 {
-                    Title = "Erro da requisição",
-                    Detail =  ex.Message,
+                    Title = Resources.Erro_na_requisicao,
+                    Detail = ex.Message,
                     Status = (int) HttpStatusCode.BadRequest
                 }
                 : new ProblemDetails
                 {
                     Title = ex.Message,
-                    Detail = ex.StackTrace
+                    Detail = ex.StackTrace,
                 };
+
+        private static Task MakeResponse(HttpContext context, ProblemDetails problem) 
+        {
+            context.Response.StatusCode = problem.Status ?? (int) HttpStatusCode.InternalServerError;
+            context.Response.ContentType = MediaTypeNames.Application.Json;
+            var json = JsonSerializer.Serialize(problem);
+            return context.Response.WriteAsync(json);
+        }
     }
 }

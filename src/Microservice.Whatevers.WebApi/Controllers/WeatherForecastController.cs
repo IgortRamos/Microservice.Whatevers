@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microservice.Whatevers.Domain.Entities.Things;
+using Microservice.Whatevers.Domain.Exceptions;
+using Microservice.Whatevers.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -17,7 +20,7 @@ namespace Microservice.Whatevers.WebApi.Controllers
 
         private readonly ILogger<WeatherForecastController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, IWhateverRepository repository)
         {
             _logger = logger;
         }
@@ -25,8 +28,11 @@ namespace Microservice.Whatevers.WebApi.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
+            throw new Exception("Muito erro");
             
-            throw new Exception("Erro de aplicação");
+            throw new BusinessException("Erro de negócio");
+
+            new ThingBuilder().Build();
             
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
