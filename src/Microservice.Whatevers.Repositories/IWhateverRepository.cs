@@ -4,5 +4,7 @@ using Microservice.Whatevers.Repositories.Abstractions;
 
 namespace Microservice.Whatevers.Repositories
 {
-    public interface IWhateverRepository : IRepository<Whatever, Guid> { }
+    public interface IWhateverRepository : IRepository<Whatever, Guid>
+    {
+    }
 }

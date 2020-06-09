@@ -22,7 +22,7 @@ namespace Microservice.Whatevers.Domain {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Resources {
+    internal class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Microservice.Whatevers.Domain {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Resources.ResourceManager ResourceManager {
+        internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Microservice.Whatevers.Domain.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace Microservice.Whatevers.Domain {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Globalization.CultureInfo Culture {
+        internal static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace Microservice.Whatevers.Domain {
         /// <summary>
         ///   Looks up a localized string similar to Erro na requisição.
         /// </summary>
-        public static string Erro_na_requisicao {
+        internal static string Erro_na_requisicao {
             get {
                 return ResourceManager.GetString("Erro_na_requisicao", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace Microservice.Whatevers.Domain {
         /// <summary>
         ///   Looks up a localized string similar to O Identificador informado para Thing é inválido.
         /// </summary>
-        public static string Thing_Identifier_invalid {
+        internal static string Thing_Identifier_invalid {
             get {
                 return ResourceManager.GetString("Thing_Identifier_invalid", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace Microservice.Whatevers.Domain {
         /// <summary>
         ///   Looks up a localized string similar to O Nome informado para Thing é inválido.
         /// </summary>
-        public static string Thing_Name_invalid {
+        internal static string Thing_Name_invalid {
             get {
                 return ResourceManager.GetString("Thing_Name_invalid", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace Microservice.Whatevers.Domain {
         /// <summary>
         ///   Looks up a localized string similar to O Tipo informado para Thing é inválido.
         /// </summary>
-        public static string Thing_Type_invalid {
+        internal static string Thing_Type_invalid {
             get {
                 return ResourceManager.GetString("Thing_Type_invalid", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace Microservice.Whatevers.Domain {
         /// <summary>
         ///   Looks up a localized string similar to O Valor informado para Thing deve ser maior que zero.
         /// </summary>
-        public static string Thing_Value_less_than_zero {
+        internal static string Thing_Value_less_than_zero {
             get {
                 return ResourceManager.GetString("Thing_Value_less_than_zero", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace Microservice.Whatevers.Domain {
         /// <summary>
         ///   Looks up a localized string similar to O Identificador informado para Whatever é inválido.
         /// </summary>
-        public static string Whatever_Identifier_invalid {
+        internal static string Whatever_Identifier_invalid {
             get {
                 return ResourceManager.GetString("Whatever_Identifier_invalid", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace Microservice.Whatevers.Domain {
         /// <summary>
         ///   Looks up a localized string similar to O Nome informado para Whatever é inválido.
         /// </summary>
-        public static string Whatever_Name_invalid {
+        internal static string Whatever_Name_invalid {
             get {
                 return ResourceManager.GetString("Whatever_Name_invalid", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace Microservice.Whatevers.Domain {
         /// <summary>
         ///   Looks up a localized string similar to Thing informado para Whatever é inválido.
         /// </summary>
-        public static string Whatever_Thing_invalid {
+        internal static string Whatever_Thing_invalid {
             get {
                 return ResourceManager.GetString("Whatever_Thing_invalid", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace Microservice.Whatevers.Domain {
         /// <summary>
         ///   Looks up a localized string similar to O Tempo informado para Whatever é inválido.
         /// </summary>
-        public static string Whatever_Time_invalid {
+        internal static string Whatever_Time_invalid {
             get {
                 return ResourceManager.GetString("Whatever_Time_invalid", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace Microservice.Whatevers.Domain {
         /// <summary>
         ///   Looks up a localized string similar to O Tipo informado para Whatever é inválido.
         /// </summary>
-        public static string Whatever_Type_invalid {
+        internal static string Whatever_Type_invalid {
             get {
                 return ResourceManager.GetString("Whatever_Type_invalid", resourceCulture);
             }

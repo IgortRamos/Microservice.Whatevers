@@ -1,6 +1,5 @@
 using System;
 using Microservice.Whatevers.Domain.Abstractions.Builders;
-using Microservice.Whatevers.Domain.Extensions;
 
 namespace Microservice.Whatevers.Domain.Entities.Whatevers
 {
@@ -15,7 +14,7 @@ namespace Microservice.Whatevers.Domain.Entities.Whatevers
             _name = name;
             return this;
         }
-
+        
         public WhateverBuilder WithType(string type)
         {
             _type = type;

@@ -5,7 +5,7 @@ using Microservice.Whatevers.Domain.Entities.Things;
 
 namespace Microservice.Whatevers.Domain.Entities.Whatevers
 {
-    public class Whatever : EntityBase<Guid>
+    public class Whatever: EntityBase<Guid>
     {
         internal Whatever(Guid id, string name, DateTime time, string type)
         {
@@ -15,13 +15,13 @@ namespace Microservice.Whatevers.Domain.Entities.Whatevers
             SetType(type);
             Things = new List<Thing>();
         }
-
+        
         public string Name { get; private set; }
         public virtual ICollection<Thing> Things { get; }
         public DateTime Time { get; private set; }
         public string Type { get; private set; }
-
-        public void AddThing(Thing thing)
+        
+        public void AddThing(Things.Thing thing)
         {
             if (thing == default) return;
 

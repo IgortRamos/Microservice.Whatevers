@@ -27,7 +27,7 @@ namespace Microservice.Whatevers.Domain.Entities.Things
             _value = value;
             return this;
         }
-
-        public override Thing Build() => new Thing(Id, _name, _type, _value).ThrowIfHasErros();
+        
+        public override Things.Thing Build() => new Thing(Id,  _name, _type, _value).ThrowIfHasErros();
     }
 }
